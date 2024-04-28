@@ -15,13 +15,11 @@ const mboRow_DayStart = 208;
 
 // 列(全シート共通)
 const endCol_MBO = mboSheet.getMaxColumns();
-const mboCol = 69;
-const mboCol_DataFormula = 47;
+const mboCol = 90;
 
 // 行列
 const gtdNo = gtdSheet.getRange(beginRow_GTD,1,endRow_GTD,1).getValues();
 const gtdData = gtdSheet.getRange(beginRow_GTD,1,endRow_GTD,11).getValues();
-const mboData_Day = mboSheet.getRange(mboRow_DayStart,1,366,43).getValues();
 
 // 識別
 const statusMBO = mboSheet.getRange('A1').getValue();

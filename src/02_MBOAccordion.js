@@ -5,14 +5,14 @@ function hideColMBO(e){
     const eValue = (e['value'] === '閉' || e['value'] === '開');
     const runFlag = ((endCol_MBO === mboCol) && ePosition && eValue);
     if(runFlag){
-        const hideCols = [8,12,16,20];
+        const hideCols = [9,15,21,27];
         if(e['value'] === '閉'){
             for(let i=0; i<hideCols.length; i++){
-                mboSheet.hideColumns(hideCols[i],3);
+                mboSheet.hideColumns(hideCols[i],2);
             }
         }else if(e['value'] === '開'){
             for(let i=0; i<hideCols.length; i++){
-                mboSheet.showColumns(hideCols[i],3);
+                mboSheet.showColumns(hideCols[i],2);
             }
         }
         mboSheet.getRange('A1').setValue(e['oldValue']);

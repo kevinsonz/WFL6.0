@@ -4,6 +4,7 @@
 const wflFile = SpreadsheetApp.getActiveSpreadsheet();
 const mboSheet = wflFile.getSheetByName('MBO');
 const gtdSheet = wflFile.getSheetByName('GTD');
+const todaySheet = wflFile.getSheetByName('Today');
 
 // 行
 const beginRow_MBO = 4;

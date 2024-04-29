@@ -29,14 +29,17 @@ function hiddenGTD(e){
 
   // フィルター分岐の元ネタ
   const prmCodeW = ['F','L','E','O','Z'];
+  const prmCodeFL = ['W','E','O','Z'];
   const prmCodeF = ['W','L','E','O','Z'];
   const prmCodeL = ['W','F','E','O','Z'];
   const prmCodeE = ['W','F','L'];
   const prmUrgentAndImportant = ['2','3','4','9'];
+  const prmUrgentOrImportant = ['4','9'];
   const prmUrgent = ['3','4','9'];
   const prmImportant = ['2','4','9'];
   const prmNormal = ['1','2','3','9'];
   const prmActive = ['完了','中止','保留','メモ'];
+  const prmProgress = ['未着','完了','中止','保留','メモ'];
   const prmInactive = ['完了','中止','未着','着手'];
   const prmFinished = ['未着','着手','保留','メモ'];
 
@@ -56,6 +59,10 @@ function hiddenGTD(e){
       ruleSetData1 = prmCodeW;
       eFlag = prmCodeW.includes(e['value']);
       break;
+    case 'FL':
+      ruleSetData1 = prmCodeFL;
+      eFlag = prmCodeFL.includes(e['value']);
+      break;
     case 'F':
       ruleSetData1 = prmCodeF;
       eFlag = prmCodeF.includes(e['value']);
@@ -74,9 +81,13 @@ function hiddenGTD(e){
 
   // パラメタによる場合分け（急重）
     switch(filterPRM2){
-    case '急重':
+    case '急*重':
       ruleSetData2 = prmUrgentAndImportant;
       eFlag = prmUrgentAndImportant.includes(e['value']);
+      break;
+    case '急+重':
+      ruleSetData2 = prmUrgentOrImportant;
+      eFlag = prmUrgentOrImportant.includes(e['value']);
       break;
     case '急':
       ruleSetData2 = prmUrgent;
@@ -99,6 +110,10 @@ function hiddenGTD(e){
     case '活性':
       ruleSetData3 = prmActive;
       eFlag = prmActive.includes(e['value']);
+      break;
+    case '着手':
+      ruleSetData3 = prmProgress;
+      eFlag = prmProgress.includes(e['value']);
       break;
     case '非活':
       ruleSetData3 = prmInactive;

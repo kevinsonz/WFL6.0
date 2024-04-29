@@ -17,6 +17,7 @@ const mboRow_DayStart = 208;
 // 列(全シート共通)
 const endCol_MBO = mboSheet.getMaxColumns();
 const mboCol = 90;
+const endCol_GTD = gtdSheet.getMaxColumns();
 
 // 行列
 const gtdNo = gtdSheet.getRange(beginRow_GTD,1,endRow_GTD,1).getValues();

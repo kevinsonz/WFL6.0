@@ -14,9 +14,9 @@ function ruleSet(a,b,c){
   rule3 = SpreadsheetApp.newFilterCriteria()
   .setHiddenValues(c)
   .build(); //ビルダーを構築
-  gtdSheet.getRange(beginRow_GTD-1,1,endRow_GTD,11).createFilter()
-  .setColumnFilterCriteria(4,rule1)
-  .setColumnFilterCriteria(7,rule2)
+  gtdSheet.getRange(beginRow_GTD-1,1,endRow_GTD,10).createFilter()
+  .setColumnFilterCriteria(5,rule1)
+  .setColumnFilterCriteria(8,rule2)
   .setColumnFilterCriteria(9,rule3);
 }
 
@@ -41,8 +41,8 @@ function hiddenGTD(e){
   const prmFinished = ['未着','着手','保留','メモ'];
 
   // フィルター基準値（GSSから取得）
-  const filterPRM1 = gtdSheet.getRange('D1').getValue();
-  const filterPRM2 = gtdSheet.getRange('G1').getValue();
+  const filterPRM1 = gtdSheet.getRange('E1').getValue();
+  const filterPRM2 = gtdSheet.getRange('H1').getValue();
   const filterPRM3 = gtdSheet.getRange('I1').getValue();
 
   // フィルター設定値の枠（二次元配列）
@@ -120,7 +120,7 @@ function hiddenGTD(e){
     eRow = e['range'].getRow();
     eColumn = e['range'].getColumn();
   }
-  const runFlug = (e === 'call' || eFlag || ((eRow === 1) && ((eColumn === 4) || (eColumn === 7) || (eColumn === 9)))) && (endCol === 11);
+  const runFlug = (e === 'call' || eFlag || ((eRow === 1) && ((eColumn === 5) || (eColumn === 8) || (eColumn === 9)))) && (endCol_GTD === 10);
   if(runFlug){
     let filterGTD = gtdSheet.getFilter();
     if(filterGTD !== null){

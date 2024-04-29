@@ -12,17 +12,17 @@ function doneMBO(e){
     let dd = todaySheet.getRange("L2").getValue();
     let yyyymmdd = new Date(yyyy,mm,dd);
     if(eCheck){
-      todaySheet.getRange("J4:Q10").clearContent();
-      todaySheet.getRange("J4").setValue(eCheck);
-      todaySheet.getRange("K4").setValue(doneCheck);
-      todaySheet.getRange("L4").setValue(errorCheck);
-      todaySheet.getRange("M4").setValue(kahiCheck);
-      todaySheet.getRange("N4").setValue(runFlag);
-      todaySheet.getRange("O4").setValue(todayRow);
-      todaySheet.getRange("J5").setValue(yyyy);
-      todaySheet.getRange("K5").setValue(mm);
-      todaySheet.getRange("L5").setValue(dd);
-      todaySheet.getRange("M5").setValue(yyyymmdd);
+        todaySheet.getRange("J4:Q10").clearContent();
+        todaySheet.getRange("J4").setValue(eCheck);
+        todaySheet.getRange("K4").setValue(doneCheck);
+        todaySheet.getRange("L4").setValue(errorCheck);
+        todaySheet.getRange("M4").setValue(kahiCheck);
+        todaySheet.getRange("N4").setValue(runFlag);
+        todaySheet.getRange("O4").setValue(todayRow);
+        todaySheet.getRange("J5").setValue(yyyy);
+        todaySheet.getRange("K5").setValue(mm);
+        todaySheet.getRange("L5").setValue(dd);
+        todaySheet.getRange("M5").setValue(yyyymmdd);
     }
     if(runFlag){
         const zValue = todaySheet.getRange("G13").getValue(); todaySheet.getRange("N5").setValue(zValue);
@@ -52,4 +52,4 @@ function doneMBO(e){
         todaySheet.getRange("P1").setValue(Utilities.formatDate(new Date(),'Asia/Tokyo','yyyy/MM/dd hh:mm:ss'));
     }
     todaySheet.getRange("G11").setValue(false);
-  }
+}

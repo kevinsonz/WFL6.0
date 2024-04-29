@@ -49,7 +49,7 @@ function doneMBO(e){
         todaySheet.getRange("J2").setValue(yyyy);
         todaySheet.getRange("K2").setValue(mm);
         todaySheet.getRange("L2").setValue(dd);
-        todaySheet.getRange("P1").setValue(Utilities.formatDate(new Date(),'Asia/Tokyo','yyyy/MM/dd hh:mm:ss'));
+        todaySheet.getRange("P1").setValue(Utilities.formatDate(new Date(),'Asia/Tokyo','yyyy/MM/dd HH:mm:ss'));
     }
     todaySheet.getRange("G11").setValue(false);
 }

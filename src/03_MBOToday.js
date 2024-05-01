@@ -1,30 +1,39 @@
 // MBO：TodayシートのDone等処理を実行
 
 function doneMBO(e){
-    const eCheck = e['value'];
-    const doneCheck = todaySheet.getRange("G11").getValue();
-    const errorCheck = todaySheet.getRange("M11").getValue();
-    const kahiCheck = todaySheet.getRange("A2").getValue() === "可";
-    const runFlag = eCheck && doneCheck && errorCheck && kahiCheck;
+    //todaySheet.getRange("L3:P3").clearContent();
+    const eCheck = e['value']; //todaySheet.getRange("L3").setValue(eCheck);
+    const doneCheck = todaySheet.getRange("G11").getValue(); //todaySheet.getRange("M3").setValue(doneCheck);
+    const errorCheck = todaySheet.getRange("M11").getValue(); //todaySheet.getRange("N3").setValue(errorCheck);
+    const kahiCheck = todaySheet.getRange("A2").getValue() === "可"; //todaySheet.getRange("O3").setValue(kahiCheck);
+    const runFlag = eCheck && doneCheck && errorCheck && kahiCheck; //todaySheet.getRange("P3").setValue(runFlag);
     const todayRow = todaySheet.getRange("P2").getValue();
     let yyyy = todaySheet.getRange("J2").getValue();
     let mm = todaySheet.getRange("K2").getValue()-1;
     let dd = todaySheet.getRange("L2").getValue();
     let yyyymmdd = new Date(yyyy,mm,dd);
     if(runFlag){
+        const lFormula = mboSheet.getRange("L"+todayRow).getFormula();
+        const nFormula = mboSheet.getRange("N"+todayRow).getFormula();
+        const rFormula = mboSheet.getRange("R"+todayRow).getFormula();
+        const tFormula = mboSheet.getRange("T"+todayRow).getFormula();
+        const xFormula = mboSheet.getRange("X"+todayRow).getFormula();
+        const zFormula = mboSheet.getRange("Z"+todayRow).getFormula();
+        const adFormula = mboSheet.getRange("AD"+todayRow).getFormula();
+        const afFormula = mboSheet.getRange("AF"+todayRow).getFormula();
         todaySheet.getRange("G13").copyTo(mboSheet.getRange("G"+todayRow),{contentsOnly:true});
         todaySheet.getRange("C14:G14").copyTo(mboSheet.getRange("I"+todayRow+":N"+todayRow),{contentsOnly:true});
-        mboSheet.getRange("L"+todayRow).setFormula(mboSheet.getRange("L3").getFormula());
-        mboSheet.getRange("N"+todayRow).setFormula(mboSheet.getRange("N3").getFormula());
         todaySheet.getRange("C15:G15").copyTo(mboSheet.getRange("O"+todayRow+":T"+todayRow),{contentsOnly:true});
-        mboSheet.getRange("R"+todayRow).setFormula(mboSheet.getRange("R3").getFormula());
-        mboSheet.getRange("T"+todayRow).setFormula(mboSheet.getRange("T3").getFormula());
         todaySheet.getRange("C16:G16").copyTo(mboSheet.getRange("U"+todayRow+":Z"+todayRow),{contentsOnly:true});
-        mboSheet.getRange("X"+todayRow).setFormula(mboSheet.getRange("X3").getFormula());
-        mboSheet.getRange("Z"+todayRow).setFormula(mboSheet.getRange("Z3").getFormula());
         todaySheet.getRange("C17:G17").copyTo(mboSheet.getRange("AA"+todayRow+":AF"+todayRow),{contentsOnly:true});
-        mboSheet.getRange("AD"+todayRow).setFormula(mboSheet.getRange("AD3").getFormula());
-        mboSheet.getRange("AF"+todayRow).setFormula(mboSheet.getRange("AF3").getFormula());
+        mboSheet.getRange("L"+todayRow).setFormula(lFormula);
+        mboSheet.getRange("N"+todayRow).setFormula(nFormula);
+        mboSheet.getRange("R"+todayRow).setFormula(rFormula);
+        mboSheet.getRange("T"+todayRow).setFormula(tFormula);
+        mboSheet.getRange("X"+todayRow).setFormula(xFormula);
+        mboSheet.getRange("Z"+todayRow).setFormula(zFormula);
+        mboSheet.getRange("AD"+todayRow).setFormula(adFormula);
+        mboSheet.getRange("AF"+todayRow).setFormula(afFormula);
         todaySheet.getRange("G13").clearContent();
         todaySheet.getRange("C14:H17").clearContent();
         yyyymmdd = new Date(yyyymmdd.getFullYear(), yyyymmdd.getMonth(), yyyymmdd.getDate()+1);

@@ -1,6 +1,6 @@
 // MBOフィルターのモード切替え
 function mboFilter(e){
-  const eValue1 = statusMBO === '今' && e['value'] === 'TRUE';
+  const eValue1 = statusMBO === '今' && e['value'] === 'TRUE' && e['range'].getRow() === 2 && e['range'].getColumn() === 1;;
   const eValue2 = statusMBO === '全' && e['value'] === '全';
   const eValue3 = statusMBO === '今' && e['value'] === '今' && e['oldValue'] === '全';
   const runFlag = endCol_MBO === mboCol;

@@ -5,7 +5,7 @@ function hideColMBO(e){
     const eValue = (e['value'] === '閉' || e['value'] === '開');
     const runFlag = ((endCol_MBO === mboCol) && ePosition && eValue);
     if(runFlag){
-        const hideCols = [9,15,21,27];
+        const hideCols = [11,18,25,32];
         if(e['value'] === '閉'){
             for(let i=0; i<hideCols.length; i++){
                 mboSheet.hideColumns(hideCols[i],2);

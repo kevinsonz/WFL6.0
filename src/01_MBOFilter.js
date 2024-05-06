@@ -2,8 +2,9 @@
 function mboFilter(e){
   const eValue1 = statusMBO === '今' && e['value'] === 'TRUE';
   const eValue2 = statusMBO === '全' && e['value'] === '全';
+  const eValue3 = statusMBO === '今' && e['value'] === '今' && e['oldValue'] === '全';
   const runFlag = endCol_MBO === mboCol;
-  if(runFlag && (eValue1 || eValue2)){
+  if(runFlag && (eValue1 || eValue2 || eValue3)){
     let filterMBO = mboSheet.getFilter();
     if(filterMBO !== null){
       mboSheet.getFilter().remove();
@@ -11,7 +12,7 @@ function mboFilter(e){
     let rule = SpreadsheetApp.newFilterCriteria()
           .setHiddenValues([])
           .build();
-    if(eValue1){
+    if(eValue1 || eValue3){
         rule = SpreadsheetApp.newFilterCriteria()
           .setHiddenValues(["Hidden"])
           .build();

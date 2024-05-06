@@ -30,6 +30,7 @@ function hiddenGTD(e){
   // フィルター分岐の元ネタ
   const prmCodeW = ['F','L','E','O','Z'];
   const prmCodeFL = ['W','E','O','Z'];
+  const prmCodeFLE = ['W','O','Z'];
   const prmCodeF = ['W','L','E','O','Z'];
   const prmCodeL = ['W','F','E','O','Z'];
   const prmCodeE = ['W','F','L'];
@@ -61,6 +62,10 @@ function hiddenGTD(e){
       break;
     case 'FL':
       ruleSetData1 = prmCodeFL;
+      eFlag = prmCodeFL.includes(e['value']);
+      break;
+    case 'FLE':
+      ruleSetData1 = prmCodeFLE;
       eFlag = prmCodeFL.includes(e['value']);
       break;
     case 'F':

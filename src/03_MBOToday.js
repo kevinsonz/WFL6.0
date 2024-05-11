@@ -74,6 +74,7 @@ function doneMBO(e){
         todaySheet.getRange("C19:E19").clearContent(); // F目標・振返・工数クリア
         todaySheet.getRange("C23:E23").clearContent(); // L目標・振返・工数クリア
         todaySheet.getRange("C27:E27").clearContent(); // E目標・振返・工数クリア
+        todaySheet.getRange("E14").clearContent(); // 仮眠クリア
         todaySheet.getRange("F15").setValue(false); // W相殺クリア
         todaySheet.getRange("F19").setValue(false); // W相殺クリア
         todaySheet.getRange("F23").setValue(false); // W相殺クリア

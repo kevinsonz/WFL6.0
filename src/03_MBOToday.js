@@ -89,7 +89,7 @@ function doneMBO(e){
         todaySheet.getRange("D20:E22").clearContent(); // F時間分割クリア
         todaySheet.getRange("D24:E26").clearContent(); // L時間分割クリア
         todaySheet.getRange("D28:E30").clearContent(); // E時間分割クリア
-        const mode = todaySheet.getRange("H13").getValue(); // 現在のモードを取得
+        const mode = todaySheet.getRange("H12").getValue(); // 現在のモードを取得
         if(mode === '時間分割モード'){ // 時間分割モードの場合は数式を貼り直す
             todaySheet.getRange("E15").setFormula('=sumifs($J$15:$J$30,$I$15:$I$30,mid($B15,1,1)&"(工数)")'); // W工数集計数式貼付
             todaySheet.getRange("E19").setFormula('=sumifs($J$15:$J$30,$I$15:$I$30,mid($B19,1,1)&"(工数)")'); // F工数集計数式貼付

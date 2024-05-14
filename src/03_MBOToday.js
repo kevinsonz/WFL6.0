@@ -89,6 +89,7 @@ function doneMBO(e){
         todaySheet.getRange("D20:E22").clearContent(); // F時間分割クリア
         todaySheet.getRange("D24:E26").clearContent(); // L時間分割クリア
         todaySheet.getRange("D28:E30").clearContent(); // E時間分割クリア
+        todaySheet.getRange("E14").setFormula('=0'); // W時間分割工数初期化（=0）
         todaySheet.getRange("E16:E18").setFormula('=0'); // W時間分割工数初期化（=0）
         todaySheet.getRange("E20:E22").setFormula('=0'); // F時間分割工数初期化（=0）
         todaySheet.getRange("E24:E26").setFormula('=0'); // L時間分割工数初期化（=0）

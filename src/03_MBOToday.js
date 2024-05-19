@@ -47,29 +47,29 @@ function doneMBO(e){
 
     // Done処理
     if(runFlag){
-        todaySheet.getRange("G13").copyTo(mboSheet.getRange("BK"+todayRow),{contentsOnly:true}); // 起床
-        todaySheet.getRange("G14").copyTo(mboSheet.getRange("BL"+todayRow),{contentsOnly:true}); // 就寝
-        todaySheet.getRange("E14").copyTo(mboSheet.getRange("H"+todayRow),{contentsOnly:true}); // 仮眠
-        todaySheet.getRange("C15").copyTo(mboSheet.getRange("K"+todayRow),{contentsOnly:true}); // W目標
-        todaySheet.getRange("C19").copyTo(mboSheet.getRange("R"+todayRow),{contentsOnly:true}); // F目標
-        todaySheet.getRange("C23").copyTo(mboSheet.getRange("Y"+todayRow),{contentsOnly:true}); // L目標
-        todaySheet.getRange("C27").copyTo(mboSheet.getRange("AF"+todayRow),{contentsOnly:true}); // E目標
-        todaySheet.getRange("K16").copyTo(mboSheet.getRange("L"+todayRow),{contentsOnly:true}); // W振返
-        todaySheet.getRange("K20").copyTo(mboSheet.getRange("S"+todayRow),{contentsOnly:true}); // F振返
-        todaySheet.getRange("K24").copyTo(mboSheet.getRange("Z"+todayRow),{contentsOnly:true}); // L振返
-        todaySheet.getRange("K28").copyTo(mboSheet.getRange("AG"+todayRow),{contentsOnly:true}); // E振返
-        todaySheet.getRange("E15").copyTo(mboSheet.getRange("M"+todayRow),{contentsOnly:true}); // W工数
-        todaySheet.getRange("E19").copyTo(mboSheet.getRange("T"+todayRow),{contentsOnly:true}); // F工数
-        todaySheet.getRange("E23").copyTo(mboSheet.getRange("AA"+todayRow),{contentsOnly:true}); // L工数
-        todaySheet.getRange("E27").copyTo(mboSheet.getRange("AH"+todayRow),{contentsOnly:true}); // E工数
-        todaySheet.getRange("F15").copyTo(mboSheet.getRange("P"+todayRow),{contentsOnly:true}); // W相殺
-        todaySheet.getRange("F19").copyTo(mboSheet.getRange("W"+todayRow),{contentsOnly:true}); // F相殺
-        todaySheet.getRange("F23").copyTo(mboSheet.getRange("AD"+todayRow),{contentsOnly:true}); // L相殺
-        todaySheet.getRange("F27").copyTo(mboSheet.getRange("AK"+todayRow),{contentsOnly:true}); // E相殺
-        todaySheet.getRange("G15").copyTo(mboSheet.getRange("O"+todayRow),{contentsOnly:true}); // W評価
-        todaySheet.getRange("G19").copyTo(mboSheet.getRange("V"+todayRow),{contentsOnly:true}); // F評価
-        todaySheet.getRange("G23").copyTo(mboSheet.getRange("AC"+todayRow),{contentsOnly:true}); // L評価
-        todaySheet.getRange("G27").copyTo(mboSheet.getRange("AJ"+todayRow),{contentsOnly:true}); // E評価
+        todaySheet.getRange("G13").copyTo(mboSheet.getRange(kishoCol+todayRow),{contentsOnly:true}); // 起床
+        todaySheet.getRange("G14").copyTo(mboSheet.getRange(shushinCol+todayRow),{contentsOnly:true}); // 就寝
+        todaySheet.getRange("E14").copyTo(mboSheet.getRange(kaminCol+todayRow),{contentsOnly:true}); // 仮眠
+        todaySheet.getRange("C15").copyTo(mboSheet.getRange(wMokuhyoCol+todayRow),{contentsOnly:true}); // W目標
+        todaySheet.getRange("C19").copyTo(mboSheet.getRange(fMokuhyoCol+todayRow),{contentsOnly:true}); // F目標
+        todaySheet.getRange("C23").copyTo(mboSheet.getRange(lMokuhyoCol+todayRow),{contentsOnly:true}); // L目標
+        todaySheet.getRange("C27").copyTo(mboSheet.getRange(eMokuhyoCol+todayRow),{contentsOnly:true}); // E目標
+        todaySheet.getRange("K16").copyTo(mboSheet.getRange(wFurikaeriCol+todayRow),{contentsOnly:true}); // W振返
+        todaySheet.getRange("K20").copyTo(mboSheet.getRange(fFurikaeriCol+todayRow),{contentsOnly:true}); // F振返
+        todaySheet.getRange("K24").copyTo(mboSheet.getRange(lFurikaeriCol+todayRow),{contentsOnly:true}); // L振返
+        todaySheet.getRange("K28").copyTo(mboSheet.getRange(eFurikaeriCol+todayRow),{contentsOnly:true}); // E振返
+        todaySheet.getRange("E15").copyTo(mboSheet.getRange(wKousuCol+todayRow),{contentsOnly:true}); // W工数
+        todaySheet.getRange("E19").copyTo(mboSheet.getRange(fKousuCol+todayRow),{contentsOnly:true}); // F工数
+        todaySheet.getRange("E23").copyTo(mboSheet.getRange(lKousuCol+todayRow),{contentsOnly:true}); // L工数
+        todaySheet.getRange("E27").copyTo(mboSheet.getRange(eKousuCol+todayRow),{contentsOnly:true}); // E工数
+        todaySheet.getRange("F15").copyTo(mboSheet.getRange(wSousaiCol+todayRow),{contentsOnly:true}); // W相殺
+        todaySheet.getRange("F19").copyTo(mboSheet.getRange(fSousaiCol+todayRow),{contentsOnly:true}); // F相殺
+        todaySheet.getRange("F23").copyTo(mboSheet.getRange(lSousaiCol+todayRow),{contentsOnly:true}); // L相殺
+        todaySheet.getRange("F27").copyTo(mboSheet.getRange(eSousaiCol+todayRow),{contentsOnly:true}); // E相殺
+        todaySheet.getRange("G15").copyTo(mboSheet.getRange(wHyoukaCol+todayRow),{contentsOnly:true}); // W評価
+        todaySheet.getRange("G19").copyTo(mboSheet.getRange(fHyoukaCol+todayRow),{contentsOnly:true}); // F評価
+        todaySheet.getRange("G23").copyTo(mboSheet.getRange(lHyoukaCol+todayRow),{contentsOnly:true}); // L評価
+        todaySheet.getRange("G27").copyTo(mboSheet.getRange(eHyoukaCol+todayRow),{contentsOnly:true}); // E評価
         todaySheet.getRange("C15:E15").clearContent(); // W目標・振返・工数クリア
         todaySheet.getRange("C19:E19").clearContent(); // F目標・振返・工数クリア
         todaySheet.getRange("C23:E23").clearContent(); // L目標・振返・工数クリア

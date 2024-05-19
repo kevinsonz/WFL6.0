@@ -12,7 +12,7 @@ function addRowGTD(){
               gtdSheet.getRange(beginRow_GTD+i,1).setValue(maxNo + addNo);
               gtdSheet.getRange(beginRow_GTD+i,6).setValue('－');
               gtdSheet.getRange(beginRow_GTD+i,7).setValue('－');
-              gtdSheet.getRange(beginRow_GTD+i,8).setFormula('=iferror(if(or(I'+(beginRow_GTD+i)+'="完了",I'+(beginRow_GTD+i)+'="保留",I'+(beginRow_GTD+i)+'="中止"),9,ifs(and(E'+(beginRow_GTD+i)+'=E$1,F'+(beginRow_GTD+i)+'=F$1),1,and(E'+(beginRow_GTD+i)+'=E$1,F'+(beginRow_GTD+i)+'<>F$1),2,and(E'+(beginRow_GTD+i)+'<>E$1,F'+(beginRow_GTD+i)+'=F$1),3,and(E'+(beginRow_GTD+i)+'<>E$1,F'+(beginRow_GTD+i)+'<>F$1),4)),9)');
+              gtdSheet.getRange(beginRow_GTD+i,8).setFormula('=iferror(if(or(I'+(beginRow_GTD+i)+'="完了",I'+(beginRow_GTD+i)+'="保留",I'+(beginRow_GTD+i)+'="中止"),9,ifs(and(F'+(beginRow_GTD+i)+'=F$1,G'+(beginRow_GTD+i)+'=G$1),1,and(F'+(beginRow_GTD+i)+'=F$1,G'+(beginRow_GTD+i)+'<>G$1),2,and(F'+(beginRow_GTD+i)+'<>F$1,G'+(beginRow_GTD+i)+'=G$1),3,and(F'+(beginRow_GTD+i)+'<>F$1,G'+(beginRow_GTD+i)+'<>G$1),4)),9)');
               gtdSheet.getRange(beginRow_GTD+i,9).setValue('未着');
               gtdSheet.getRange(beginRow_GTD+i,10).setFormula('=countifs(A$'+beginRow_GTD+':A,A'+(beginRow_GTD+i)+')');
             }

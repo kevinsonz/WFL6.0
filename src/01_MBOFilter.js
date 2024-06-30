@@ -1,6 +1,6 @@
 // MBOフィルターのモード切替え
 function mboFilter(e){
-  const eValue1 = statusMBO === '今' && e['value'] === 'TRUE' && e['range'].getRow() === 2 && e['range'].getColumn() === 1;;
+  const eValue1 = statusMBO === '今' && e['value'] === 'TRUE' && e['range'].getRow() === 3 && e['range'].getColumn() === 1;
   const eValue2 = statusMBO === '全' && e['value'] === '全';
   const eValue3 = statusMBO === '今' && e['value'] === '今' && e['oldValue'] === '全';
   const runFlag = endCol_MBO === mboCol;
@@ -19,6 +19,6 @@ function mboFilter(e){
     }
     mboSheet.getRange(beginRow_MBO-1,1,mboRow+1,endCol_MBO).createFilter()
       .setColumnFilterCriteria(hiddenRowNum,rule);
-    mboSheet.getRange('A2').setValue(false);
+    mboSheet.getRange('A3').setValue(false);
   }
 }

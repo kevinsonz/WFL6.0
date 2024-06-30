@@ -1,7 +1,7 @@
 // MBO：数値・グラフのみ列表示（作成中）
 
 function hideColMBO(e){
-    const ePosition = e['range'].getRow() === 1 && e['range'].getColumn() === 1;
+    const ePosition = e['range'].getRow() === 2 && e['range'].getColumn() === 1;
     const eValue = (e['value'] === '閉' || e['value'] === '開');
     const runFlag = ((endCol_MBO === mboCol) && ePosition && eValue);
     if(runFlag){
@@ -15,6 +15,6 @@ function hideColMBO(e){
                 mboSheet.showColumns(hideCols[i],kaiheiCols);
             }
         }
-        mboSheet.getRange('A1').setValue(e['oldValue']);
+        mboSheet.getRange('A2').setValue(e['oldValue']);
     }
 }

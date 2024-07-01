@@ -19,6 +19,7 @@ const endCol_MBO = mboSheet.getMaxColumns();
 const mboCol = 68;
 const endCol_GTD = gtdSheet.getMaxColumns();
 const hiddenRowNum = 2; // MBO_表示・非表示列（数値）
+const eventColNum = 6; // MBO_Eventエリア開始列（数値）
 const wStartColNum = 7; // MBO_Wエリア開始列（数値）
 const fStartColNum = 16; // MBO_Fエリア開始列（数値）
 const lStartColNum = 25; // MBO_Lエリア開始列（数値）

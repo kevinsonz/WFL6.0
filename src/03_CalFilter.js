@@ -14,7 +14,7 @@ function calFilter(e){
             .setHiddenValues([0])
             .build();
     }
-    calSheet.getRange(beginRow_Cal,1,endRow_Cal-beginRow_Cal,1).createFilter()
+    calSheet.getRange(beginRow_Cal,1,endRow_Cal-beginRow_Cal+1,1).createFilter()
         .setColumnFilterCriteria(1,rule);
     }
   }

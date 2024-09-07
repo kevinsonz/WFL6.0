@@ -28,6 +28,3 @@ const wFurikaeriCol = 'H'; // MBO_W振返列（アルファベット）
 const fFurikaeriCol = 'Q'; // MBO_F振返列（アルファベット）
 const lFurikaeriCol = 'Z'; // MBO_L振返列（アルファベット）
 const eFurikaeriCol = 'AI'; // MBO_E振返列（アルファベット）
-
-// 識別
-const statusMBO = mboSheet.getRange('A2').getValue();

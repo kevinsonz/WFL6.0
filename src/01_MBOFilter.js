@@ -28,7 +28,7 @@ function mboFilter(e){
             .build();
       }
       mboSheet.getRange(beginRow_MBO-1,1,mboRow+1,endCol_MBO).createFilter()
-        .setColumnFilterCriteria(hiddenRowNum,rule);
+        .setColumnFilterCriteria(hiddenColNum,rule);
     }
   }
 }

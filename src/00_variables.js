@@ -3,17 +3,20 @@
 // ファイル・シート
 const wflFile = SpreadsheetApp.getActiveSpreadsheet();
 const mboSheet = wflFile.getSheetByName('MBO');
+const calSheet = wflFile.getSheetByName('Cal');
 
 // 行
 const beginRow_MBO = 5;
 const endRow_MBO = mboSheet.getMaxRows();
 const mboRow = 515;
 const mboRow_DayStart = 150;
+const beginRow_Cal = 8;
+const endRow_Cal = calSheet.getMaxRows();
 
 // 列(全シート共通)
 const endCol_MBO = mboSheet.getMaxColumns();
 const mboCol = 68;
-const hiddenRowNum = 2; // MBO_表示・非表示列（数値）
+const hiddenColNum = 2; // MBO_表示・非表示列（数値）
 const eventColNum = 6; // MBO_Eventエリア開始列（数値）
 const wStartColNum = 7; // MBO_Wエリア開始列（数値）
 const fStartColNum = 16; // MBO_Fエリア開始列（数値）

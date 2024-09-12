@@ -1,9 +1,9 @@
 // Calフィルター
 function calFilter(e){
-    const filCk = calSheet.getRange('A7').getValue(); // チェック状態
-    const cmpCk = calSheet.getRange('B7').getValue(); // チェック状態
-    const eCell1 = (e['range'].getRow() === 7 && e['range'].getColumn() === 1); // チェック
-    const eCell2 = (e['range'].getRow() === 7 && e['range'].getColumn() === 2); // チェック
+    const filCk = calSheet.getRange('D5').getValue(); // チェック状態
+    const cmpCk = calSheet.getRange('D6').getValue(); // チェック状態
+    const eCell1 = (e['range'].getRow() === 5 && e['range'].getColumn() === 4); // チェック
+    const eCell2 = (e['range'].getRow() === 6 && e['range'].getColumn() === 4); // チェック
     if(eCell1 || eCell2){
         let filterMBO = calSheet.getFilter();
         if(filterMBO !== null){

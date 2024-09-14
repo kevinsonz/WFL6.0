@@ -31,3 +31,7 @@ const wFurikaeriCol = 'H'; // MBO_W振返列（アルファベット）
 const fFurikaeriCol = 'Q'; // MBO_F振返列（アルファベット）
 const lFurikaeriCol = 'Z'; // MBO_L振返列（アルファベット）
 const eFurikaeriCol = 'AI'; // MBO_E振返列（アルファベット）
+const batStartCol_Cal = 8;
+const batGoalCol_Cal = 9;
+const batFlagCol_Cal = 10;
+const beginCol_Cal = 11;

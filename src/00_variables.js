@@ -6,7 +6,7 @@ const mboSheet = wflFile.getSheetByName('MBO');
 const calSheet = wflFile.getSheetByName('PJ');
 const kakoSheetName = '過去ログ'; // 本体・過去ログファイル（共通）
 const kakoSheetMain = wflFile.getSheetByName(kakoSheetName); // 本体ファイル
-const kakoId = 'YOUR_EXTERNAL_SPREADSHEET_ID'; // 過去ログファイル
+// const kakoId = 'YOUR_EXTERNAL_SPREADSHEET_ID'; // 過去ログファイル
 const kakoFile = SpreadsheetApp.openById(kakoId); // 過去ログファイル
 const kakoSheetExternal = kakoFile.getSheetByName(kakoSheetName); // 過去ログファイル
 

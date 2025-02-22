@@ -4,6 +4,11 @@
 const wflFile = SpreadsheetApp.getActiveSpreadsheet();
 const mboSheet = wflFile.getSheetByName('MBO');
 const calSheet = wflFile.getSheetByName('PJ');
+const kakoSheetName = '過去ログ'; // 本体・過去ログファイル（共通）
+const kakoSheetMain = wflFile.getSheetByName(kakoSheetName); // 本体ファイル
+const kakoId = 'YOUR_EXTERNAL_SPREADSHEET_ID'; // 過去ログファイル
+const kakoFile = SpreadsheetApp.openById(kakoId); // 過去ログファイル
+const kakoSheetExternal = kakoFile.getSheetByName(kakoSheetName); // 過去ログファイル
 
 // 行
 const beginRow_MBO = 4;
@@ -12,6 +17,8 @@ const mboRow = 893;
 const mboRow_DayStart = 150;
 const beginRow_Cal = 11;
 const endRow_Cal = calSheet.getMaxRows();
+const endRow_KakoMain = kakoSheetMain.getMaxRows(); // 本体ファイル
+const endRow_KakoExternal = kakoSheetExternal.getMaxRows(); // 過去ログファイル
 
 // 列(全シート共通)
 const endCol_MBO = mboSheet.getMaxColumns();
@@ -36,3 +43,4 @@ const workCol_Cal = calSheet.getRange('H11').getValue();
 const batStartCol_Cal = workCol_Cal+0;
 const batGoalCol_Cal = workCol_Cal+1;
 const batFlagCol_Cal = workCol_Cal+2;
+const kakoCol = 35; // 本体・過去ログファイル（共通）

@@ -1,3 +1,4 @@
+/**
 // Cal数式
 function calFormula(){
     const nullFormula = calSheet.getRange(beginRow_Cal,1).getValue() !== 0;
@@ -19,3 +20,4 @@ function calFormula(){
         calSheet.getRange('NW'+(beginRow_Cal+1)+':NW').setFormula('=if(or(NP'+(beginRow_Cal+1)+'=1,NS'+(beginRow_Cal+1)+'=1,NU'+(beginRow_Cal+1)+'=1),0,1)');
     }
 }
+ */

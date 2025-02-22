@@ -12,7 +12,7 @@ function calBatch(){
     }
 
     if(batNumber>0){
-        let pjRowData = calSheet.getRange(beginRow_Cal+batNumber,beginCol_Cal,1,366).getValues();
+        let pjRowData = calSheet.getRange(beginRow_Cal+batNumber,beginCol_Cal,1,workCol_Cal-10).getValues();
         for(i=0;i<pjRowData[0].length;i++){
             if(batType==='A'){
                 if((batStartCol2-1)<=i && i<=(batGoalCol2-1)){
@@ -31,6 +31,6 @@ function calBatch(){
                 }
             }
         }
-        calSheet.getRange(beginRow_Cal+batNumber,beginCol_Cal,1,366).setValues(pjRowData);
+        calSheet.getRange(beginRow_Cal+batNumber,beginCol_Cal,1,workCol_Cal-10).setValues(pjRowData);
     }
 }

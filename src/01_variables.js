@@ -4,6 +4,7 @@
 const wflFile = SpreadsheetApp.getActiveSpreadsheet();
 const mboSheet = wflFile.getSheetByName('MBO');
 const calSheet = wflFile.getSheetByName('PJ');
+const consoleSheet = wflFile.getSheetByName('console');
 const kakoSheetName = '過去ログ'; // 本体・過去ログファイル（共通）
 const kakoSheetMain = wflFile.getSheetByName(kakoSheetName); // 本体ファイル
 // const kakoId = 'YOUR_EXTERNAL_SPREADSHEET_ID'; // 過去ログファイル
@@ -17,12 +18,14 @@ const mboRow = 893;
 const mboRow_DayStart = 150;
 const beginRow_Cal = 11;
 const endRow_Cal = calSheet.getMaxRows();
-const endRow_KakoMain = kakoSheetMain.getMaxRows(); // 本体ファイル
-const endRow_KakoExternal = kakoSheetExternal.getMaxRows(); // 過去ログファイル
+// const endRow_KakoExternal = kakoSheetExternal.getMaxRows(); // 過去ログファイル
+const kakoStratRow = 2; // 過去ログファイルの開始行
+const kakoMainRow = 378; // 本体内の過去ログシートの行数（見出し除く）
 
 // 列(全シート共通)
 const endCol_MBO = mboSheet.getMaxColumns();
-const mboCol = 68;
+const mboStartCol = 1; // MBOシート開始列
+const mboEndCol = 68; // MBOシート終了列
 const hiddenColNum = 2; // MBO_表示・非表示列（数値）
 const eventColNum = 6; // MBO_Eventエリア開始列（数値）
 const wStartColNum = 7; // MBO_Wエリア開始列（数値）
@@ -43,4 +46,14 @@ const workCol_Cal = calSheet.getRange('H11').getValue();
 const batStartCol_Cal = workCol_Cal+0;
 const batGoalCol_Cal = workCol_Cal+1;
 const batFlagCol_Cal = workCol_Cal+2;
-const kakoCol = 35; // 本体・過去ログファイル（共通）
+const kakoStartCol = 1; // 本体・過去ログシートの開始列（共通）
+const kakoEndCol = 35; // 本体・過去ログシートの終了列（共通）
+
+// セル
+const imakokoRunCell = 'A3' // 今ココ絞込みを実行するフラグ
+const yearViewRunCell = 'E1' // 年度表示モードを実行するフラグ
+const prevMonthRunCell = 'E2' // 前月表示モードを実行するフラグ
+const nextMonthRunCell = 'E3' // 翌月表示モードを実行するフラグ
+const accordionRunCell = 'B3' // アコーディオンを実行するフラグ
+const kakoRunCell = 'E518' // 過去ログモードを実行するフラグ
+const kakoYearCell = 'C518' // 過去ログ対象とする年度

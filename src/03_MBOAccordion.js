@@ -1,10 +1,10 @@
 // MBO：数値・グラフのみ列表示
 
 function hideColMBO(e){
-  const accCk = mboSheet.getRange('B3').getValue(); // アコーディオン状態
+  const accCk = mboSheet.getRange(accordionRunCell).getValue(); // アコーディオン状態
   const eValue = e['value'];
   const eCell = e['range'].getRow() === 3 && e['range'].getColumn() === 2;
-  const colCheck = endCol_MBO === mboCol;
+  const colCheck = endCol_MBO === mboEndCol;
   const runFlag = eValue && eCell && colCheck;
     if(runFlag){
         const hideCols = [wStartColNum,fStartColNum,lStartColNum,eStartColNum];

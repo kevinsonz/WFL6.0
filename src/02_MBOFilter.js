@@ -1,9 +1,9 @@
 // MBOフィルターのモード切替え
 function mboFilter(e){
-  const imaCk = mboSheet.getRange('A3').getValue(); // 今ココ状態
-  const nenCk = mboSheet.getRange('E1').getValue(); // 年度モード状態
-  const zenCk = mboSheet.getRange('E2').getValue(); // 前月モード状態
-  const jigCk = mboSheet.getRange('E3').getValue(); // 次月モード状態
+  const imaCk = mboSheet.getRange(imakokoRunCell).getValue(); // 今ココ状態
+  const nenCk = mboSheet.getRange(yearViewRunCell).getValue(); // 年度モード状態
+  const zenCk = mboSheet.getRange(prevMonthRunCell).getValue(); // 前月モード状態
+  const jigCk = mboSheet.getRange(nextMonthRunCell).getValue(); // 次月モード状態
   const eCell1_1 = (e['range'].getRow() === 3 && e['range'].getColumn() === 1); // 今ココ
   const eCell1_2 = (e['range'].getRow() === 518 && e['range'].getColumn() === 5); // 過去ログ
   const eCell2 = (e['range'].getRow() === 1 && e['range'].getColumn() === 5); // 年度
@@ -18,7 +18,7 @@ function mboFilter(e){
   const eCell = eCell1_1 || eCell1_2 || eCell2 || eCell3 || eCell4 || eCell5;
   const eCell234 = eCell2 || eCell3 || eCell4;
   const eCell34 = eCell3 || eCell4;
-  const colCheck = endCol_MBO === mboCol;
+  const colCheck = endCol_MBO === mboEndCol;
   const runFlag = eCell && colCheck;
   if(!((!imaCk && eCell234) || (nenCk && eCell34))){
     if(runFlag){
@@ -34,7 +34,7 @@ function mboFilter(e){
             .setHiddenValues(["Hidden"])
             .build();
       }
-      mboSheet.getRange(beginRow_MBO,1,mboRow,endCol_MBO).createFilter()
+      mboSheet.getRange(beginRow_MBO,mboStartCol,mboRow,endCol_MBO).createFilter()
         .setColumnFilterCriteria(hiddenColNum,rule);
     }
   }

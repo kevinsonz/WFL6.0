@@ -48,5 +48,5 @@ const prevMonthRunCell = 'E2' // 前月表示モードを実行するフラグ
 const nextMonthRunCell = 'E3' // 翌月表示モードを実行するフラグ
 const accordionRunCell = 'B3' // アコーディオンを実行するフラグ
 const kakoYearCell = 'C518' // 過去ログ対象とする年度
-const gtdCurrentMonthCheckCell = 'A6'; // GTD当月チェックボックス
-const gtdDelayCheckCell = 'B6'; // GTD遅延チェックボックス
+const gtdCurrentMonthCheckCell = 'B6'; // GTD当月チェックボックス
+const gtdDelayCheckCell = 'C6'; // GTD遅延チェックボックス

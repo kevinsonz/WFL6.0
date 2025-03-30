@@ -23,34 +23,9 @@ function gtdFilter(e){
             gtdSheet.getFilter().remove();
         }
         let rule = SpreadsheetApp.newFilterCriteria()
-            .whenTextContains('')
+            .whenTextContains('V')
             .build();
-        if(eGTDRangeCk1 && eGTDRangeCk2){
-            rule = SpreadsheetApp.newFilterCriteria()
-                .whenTextContains('Y')
-                .whenTextContains('R')
-                .build();
-        }
-        if(!eGTDRangeCk1 && eGTDRangeCk2){
-            rule = SpreadsheetApp.newFilterCriteria()
-                .whenTextContains('Y')
-                .whenTextContains('R')
-                .build();
-        }
-        if(eGTDRangeCk1 && !eGTDRangeCk2){
-            rule = SpreadsheetApp.newFilterCriteria()
-                .whenTextContains('C')
-                .whenTextContains('G')
-                .whenTextContains('Y')
-                .whenTextContains('R')
-                .build();
-        }
-        if(!eGTDRangeCk1 && !eGTDRangeCk2){
-            rule = SpreadsheetApp.newFilterCriteria()
-                .whenTextContains('')
-                .build();
-        }
-        mboSheet.getRange(beginRow_GTD,gtdStartCol,gtdRow,endCol_GTD).createFilter()
+        gtdSheet.getRange(beginRow_GTD,gtdStartCol,gtdRow,endCol_GTD).createFilter()
             .setColumnFilterCriteria(gtdFilterColNum,rule);
     }
-  }
+}

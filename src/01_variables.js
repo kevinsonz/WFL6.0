@@ -3,7 +3,6 @@
 // ファイル・シート
 const wflFile = SpreadsheetApp.getActiveSpreadsheet();
 const mboSheet = wflFile.getSheetByName('MBO');
-// const calSheet = wflFile.getSheetByName('PJ');
 const consoleSheet = wflFile.getSheetByName('console');
 const kakoSheetName = '過去ログ'; // 本体ファイル
 const kakoSheetMain = wflFile.getSheetByName(kakoSheetName); // 本体ファイル
@@ -14,8 +13,6 @@ const beginRow_MBO = 4;
 const endRow_MBO = mboSheet.getMaxRows();
 const mboRow = 893;
 const mboRow_DayStart = 150;
-// const beginRow_Cal = 11;
-// const endRow_Cal = calSheet.getMaxRows();
 
 // 列(全シート共通)
 const endCol_MBO = mboSheet.getMaxColumns();
@@ -36,11 +33,6 @@ const wFurikaeriCol = 'H'; // MBO_W振返列（アルファベット）
 const fFurikaeriCol = 'Q'; // MBO_F振返列（アルファベット）
 const lFurikaeriCol = 'Z'; // MBO_L振返列（アルファベット）
 const eFurikaeriCol = 'AI'; // MBO_E振返列（アルファベット）
-// const beginCol_Cal = 9;
-// const workCol_Cal = calSheet.getRange('H11').getValue();
-// const batStartCol_Cal = workCol_Cal+0;
-// const batGoalCol_Cal = workCol_Cal+1;
-// const batFlagCol_Cal = workCol_Cal+2;
 
 // セル
 const imakokoRunCell = 'A3' // 今ココ絞込みを実行するフラグ

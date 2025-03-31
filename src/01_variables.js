@@ -50,3 +50,5 @@ const accordionRunCell = 'B3' // アコーディオンを実行するフラグ
 const kakoYearCell = 'C518' // 過去ログ対象とする年度
 const gtdCurrentMonthCheckCell = 'B6'; // GTD当月チェックボックス
 const gtdDelayCheckCell = 'C6'; // GTD遅延チェックボックス
+const gtdTargetYearCell = 'E5'; // GTD指定年度プルダウン
+const gtdTargetMonthCell = 'E6'; // GTD指定月プルダウン

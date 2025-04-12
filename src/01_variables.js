@@ -11,7 +11,7 @@ const gtdSheet = wflFile.getSheetByName('GTD'); // 新GTD
 
 // 行
 const beginRow_MBO = 4;
-const beginRow_GTD = 11; // 新GTD（開始行）
+const beginRow_GTD = 8; // 新GTD（開始行）
 const endRow_MBO = mboSheet.getMaxRows();
 const endRow_GTD = gtdSheet.getMaxRows(); // 新GTD（終了行）
 const mboRow = 893;
@@ -48,7 +48,4 @@ const prevMonthRunCell = 'E2' // 前月表示モードを実行するフラグ
 const nextMonthRunCell = 'E3' // 翌月表示モードを実行するフラグ
 const accordionRunCell = 'B3' // アコーディオンを実行するフラグ
 const kakoYearCell = 'C518' // 過去ログ対象とする年度
-const gtdCurrentMonthCheckCell = 'B6'; // GTD当月チェックボックス
-const gtdDelayCheckCell = 'C6'; // GTD遅延チェックボックス
-const gtdTargetYearCell = 'E5'; // GTD指定年度プルダウン
-const gtdTargetMonthCell = 'E6'; // GTD指定月プルダウン
+const gtdFilterCheckCell = 'C3'; // GTDフィルター実行チェックボックス

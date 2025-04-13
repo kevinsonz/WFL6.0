@@ -54,3 +54,5 @@ const gtdPriorityCheckCell = 'C5'; // GTD優先チェックボックス
 const gtdHiddenCheckCell = 'B6'; // GTD非表示プルダウン
 const gtdImakokoMonthCurrentCell = 'R1'; // GTD今ココ月（現在）番号
 const gtdImakokoMonthNextCell = 'N2'; // GTD今ココ月（変更）番号
+const gtdShiteiMonthCurrentCell = 'P1'; // GTD今ココ月（現在）番号
+const gtdShiteiMonthNextCell = 'H4'; // GTD今ココ月（変更）番号

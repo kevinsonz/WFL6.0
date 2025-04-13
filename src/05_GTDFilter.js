@@ -21,6 +21,10 @@ function gtdFilter(e){
 
     const nextShitei = gtdSheet.getRange(gtdShiteiMonthNextCell).getValue();
     gtdSheet.getRange(gtdShiteiMonthCurrentCell).setValue(nextShitei);
+    const nextYYYY = gtdSheet.getRange(gtdShiteiYYYYNextCell).getValue();
+    gtdSheet.getRange(gtdShiteiYYYYCurrentCell).setValue(nextYYYY);
+    const nextMM = gtdSheet.getRange(gtdShiteiMMNextCell).getValue();
+    gtdSheet.getRange(gtdShiteiMMCurrentCell).setValue(nextMM);
 
     const monthCheck = gtdSheet.getRange(gtdMonthCheckCell).getValue();
     const priorityCheck = gtdSheet.getRange(gtdPriorityCheckCell).getValue();

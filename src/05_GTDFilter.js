@@ -28,8 +28,9 @@ function gtdFilter(e){
 
     const monthCheck = gtdSheet.getRange(gtdMonthCheckCell).getValue();
     const priorityCheck = gtdSheet.getRange(gtdPriorityCheckCell).getValue();
-    const hiddenCheck = gtdSheet.getRange(gtdHiddenCheckCell).getValue() === "なし";
-    const runFlug2 = monthCheck || priorityCheck || !hiddenCheck;
+    const horyuCheck = gtdSheet.getRange(gtdHoryuCheckCell).getValue();
+    const shuryoCheck = gtdSheet.getRange(gtdShuryoCheckCell).getValue();
+    const runFlug2 = monthCheck || priorityCheck || horyuCheck || shuryoCheck;
 
     if(runFlug2){
       let rule = SpreadsheetApp.newFilterCriteria()

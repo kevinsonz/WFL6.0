@@ -48,10 +48,13 @@ const prevMonthRunCell = 'E2' // 前月表示モードを実行するフラグ
 const nextMonthRunCell = 'E3' // 翌月表示モードを実行するフラグ
 const accordionRunCell = 'B3' // アコーディオンを実行するフラグ
 const kakoYearCell = 'C518' // 過去ログ対象とする年度
-const gtdFilterCheckCell = 'C3'; // GTDフィルター実行チェックボックス
-const gtdMonthCheckCell = 'C4'; // GTD月絞チェックボックス
-const gtdPriorityCheckCell = 'C5'; // GTD優先チェックボックス
-const gtdHiddenCheckCell = 'B6'; // GTD非表示プルダウン
+
+// GTD
+const gtdFilterCheckCell = 'A3'; // GTDフィルター実行チェックボックス
+const gtdMonthCheckCell = 'C3'; // GTD月絞チェックボックス
+const gtdPriorityCheckCell = 'C4'; // GTD優先チェックボックス
+const gtdHoryuCheckCell = 'C5'; // GTD『保留』非表示プルダウン
+const gtdShuryoCheckCell = 'C6'; // GTD『終了』非表示プルダウン
 const gtdImakokoMonthCurrentCell = 'R1'; // GTD今ココ月（現在）番号
 const gtdImakokoMonthNextCell = 'I2'; // GTD今ココ月（変更）番号
 const gtdShiteiMonthCurrentCell = 'D4'; // GTD今ココ月or指定年月フラグ（現在）

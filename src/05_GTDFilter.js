@@ -30,9 +30,10 @@ function gtdFilter(e){
     const priorityCheck = gtdSheet.getRange(gtdPriorityCheckCell).getValue();
     const horyuCheck = gtdSheet.getRange(gtdHoryuCheckCell).getValue();
     const shuryoCheck = gtdSheet.getRange(gtdShuryoCheckCell).getValue();
-    const runFlug2 = monthCheck || priorityCheck || horyuCheck || shuryoCheck;
+    const onlyHoryuShuryoCheck = gtdSheet.getRange(gtdOnlyHoryuAndShuryoCell).getValue();
+    const runFlug2 = !monthCheck && !priorityCheck && horyuCheck && shuryoCheck && !onlyHoryuShuryoCheck;
 
-    if(runFlug2){
+    if(!runFlug2){
       let rule = SpreadsheetApp.newFilterCriteria()
         .whenTextContains('V')
         .build();

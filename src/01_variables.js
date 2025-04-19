@@ -41,7 +41,7 @@ const fFurikaeriCol = 'Q'; // MBO_F振返列（アルファベット）
 const lFurikaeriCol = 'Z'; // MBO_L振返列（アルファベット）
 const eFurikaeriCol = 'AI'; // MBO_E振返列（アルファベット）
 
-// セル
+// MBO
 const imakokoRunCell = 'A3' // 今ココ絞込みを実行するフラグ
 const yearViewRunCell = 'E1' // 年度表示モードを実行するフラグ
 const prevMonthRunCell = 'E2' // 前月表示モードを実行するフラグ
@@ -55,11 +55,12 @@ const gtdMonthCheckCell = 'C3'; // GTD月絞チェックボックス
 const gtdPriorityCheckCell = 'C4'; // GTD優先チェックボックス
 const gtdHoryuCheckCell = 'C5'; // GTD『保留』非表示プルダウン
 const gtdShuryoCheckCell = 'C6'; // GTD『終了』非表示プルダウン
-const gtdImakokoMonthCurrentCell = 'R1'; // GTD今ココ月（現在）番号
-const gtdImakokoMonthNextCell = 'I2'; // GTD今ココ月（変更）番号
+const gtdOnlyHoryuAndShuryoCell = 'A6'; // GTD保留・終了のみ表示フラグ
+const gtdImakokoMonthCurrentCell = 'V1'; // GTD今ココ月（現在）番号
+const gtdImakokoMonthNextCell = 'M2'; // GTD今ココ月（変更）番号
 const gtdShiteiMonthCurrentCell = 'D4'; // GTD今ココ月or指定年月フラグ（現在）
 const gtdShiteiYYYYCurrentCell = 'D5'; // GTD指定年度（現在）
 const gtdShiteiMMCurrentCell = 'D6'; // GTD指定月（現在）
-const gtdShiteiMonthNextCell = 'H4'; // GTD今ココ月or指定年月フラグ（変更）
-const gtdShiteiYYYYNextCell = 'H5'; // GTD指定年度（変更）
-const gtdShiteiMMNextCell = 'H6'; // GTD指定月（変更）
+const gtdShiteiMonthNextCell = 'L4'; // GTD今ココ月or指定年月フラグ（変更）
+const gtdShiteiYYYYNextCell = 'L5'; // GTD指定年度（変更）
+const gtdShiteiMMNextCell = 'L6'; // GTD指定月（変更）

@@ -31,11 +31,11 @@ function gtdFilter(e){
     const horyuCheck = gtdSheet.getRange(gtdHoryuCheckCell).getValue();
     const shuryoCheck = gtdSheet.getRange(gtdShuryoCheckCell).getValue();
     const onlyHoryuShuryoCheck = gtdSheet.getRange(gtdOnlyHoryuAndShuryoCell).getValue();
-    const runFlug2 = !monthCheck && !priorityCheck && horyuCheck && shuryoCheck && !onlyHoryuShuryoCheck;
+    const runFlug2 = !monthCheck && !priorityCheck && !horyuCheck && !shuryoCheck && !onlyHoryuShuryoCheck;
 
     if(!runFlug2){
       let rule = SpreadsheetApp.newFilterCriteria()
-        .whenTextContains('V')
+        .whenTextContains('1')
         .build();
       gtdSheet.getRange(beginRow_GTD,gtdStartCol,gtdRow,endCol_GTD).createFilter()
         .setColumnFilterCriteria(gtdFilterColNum,rule);
